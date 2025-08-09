@@ -38,7 +38,7 @@ RUN export DISPLAY=:99 && \
     sleep 3 && \
     export WINEDEBUG=-all && \
     wineboot --init && \
-    winetricks --unattended d3dx9 vcrun2019 corefonts && \
+    winetricks --unattended d3dx9 vcrun2019 corefonts quartz devenum wmp10 gdiplus dotnet40 ffdshow cjkfonts && \
     pkill Xvfb || true
 
 # 创建 Wine 配置脚本，在运行时执行
